@@ -1,0 +1,939 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OERService</name>
+    </assembly>
+    <members>
+        <member name="M:OERService.Controllers.AppDataController.GetProfileAppData">
+            <summary>
+            This will return dropdown data collection for profile page
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.CategoriesController.Get">
+            <summary>
+            This will get all records from CategoryMaster.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.CategoriesController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CategoriesController.Post(OERService.Models.CreateCategoryMaster)">
+             <summary>
+             This will Create a CategoryMaster entry.
+             </summary>
+             <param name="category">
+             CreateCategoryMaster
+            Body: 
+            {
+            	"Name" : "",
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CategoriesController.Put(System.Int32,OERService.Models.UpdateCategoryMaster)">
+             <summary>
+             This will update CategoryMaster entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="category">
+            Body: 
+            {
+            	"Name" : "",       
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CategoriesController.Delete(System.Int32)">
+            <summary>
+            This will delete a category record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CopyrightsController.Get">
+            <summary>
+            This will get all records from CopyrightMaster.
+            </summary>
+            <returns></returns>
+            GET: api/copyrights
+        </member>
+        <member name="M:OERService.Controllers.CopyrightsController.GetById(System.Int32)">
+            <summary>
+            Get a category by id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CopyrightsController.Post(OERService.Models.CreateCopyrightMaster)">
+             <summary>
+             This will Create a CopyrightMaster entry.
+             </summary>
+             <param name="copyright">
+             CreateCopyrightMaster
+            Body: 
+            {
+            	"Title" : "",
+            	"Description" : "",
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CopyrightsController.Put(System.Int32,OERService.Models.UpdateCopyrightMaster)">
+             <summary>
+             This will update CopyrightMaster record by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="copyright">
+            Body: 
+            {
+            	"Title" : "",
+            	"Description" : "",
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CopyrightsController.Delete(System.Int32)">
+            <summary>
+            This will delete a copyright record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.Get">
+            <summary>
+            This will get all records from Course Master.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.GetById(System.Int32)">
+            <summary>
+            Get a course referenced by the Id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.Post(OERService.Models.CreateCourseRequest)">
+             <summary>
+             This will Create a CourseMaster entry.
+             </summary>
+             <param name="course">
+             CreateCourseMaster
+            Body: 
+            { 
+              "title": "Course8_updated",
+              "categoryId": 1,
+              "subCategoryId": 1,
+              "thumbnail": "Not yet uploaded",
+              "courseDescription": "This description is updated",
+              "keywords": "No keywords are given",
+              "courseContent": "No content given",  
+              "materialTypeId": 2,
+              "copyRightId": 2,
+              "isDraft": false,
+              "createdBy": 1,
+              "references": [
+              { "urlReference": "ref1" }, 
+              { "urlReference": "ref2" },
+              { "urlReference": "ref3" }],
+              "courseFiles": [
+              {"associatedFile": "file1"},
+              {"associatedFile": "file2"}]}}
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.Put(System.Int32,OERService.Models.UpdateCourseRequest)">
+             <summary>
+             This will update CourseMaster entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="course">
+            Body: 
+            {   
+            {  "id":8,
+              "title": "Course8_updated",
+              "categoryId": 1,
+              "subCategoryId": 1,
+              "thumbnail": "Not yet uploaded",
+              "courseDescription": "This description is updated",
+              "keywords": "No keywords are given",
+              "courseContent": "No content given",  
+              "materialTypeId": 2,
+              "copyRightId": 2,
+              "isDraft": false,
+              "createdBy": 1,
+              "references": [
+              { "urlReference": "ref1" }, 
+              { "urlReference": "ref2" },
+              { "urlReference": "ref3" }],
+              "courseFiles": [
+              {"associatedFile": "file1"},
+              {"associatedFile": "file2"}]}}
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.Delete(System.Int32)">
+            <summary>
+            This will delete a course record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.ApproveCourse(System.Decimal,System.Int32)">
+            <summary>
+            This will approve a course
+            </summary>
+            <param name="id"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.ReportCourse(System.Decimal)">
+            <summary>
+            This will report abuse on a course
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.ReportCourseComment(System.Decimal)">
+            <summary>
+            This will Report abuse on a course comment
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.HideCourseComment(System.Decimal,System.Decimal,System.Int32)">
+            <summary>
+            Hide a course comment. Can only be done by the resource owner
+            </summary>
+            <param name="id"></param>
+            <param name="courseId"></param>
+            <param name="requestedBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.ReportCourseWithComment(OERService.Models.CourseReportAbuseWithComment)">
+            <summary>
+            This will report a resource with comment and reason/s to report
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.CourseController.RateCourse(OERService.Models.CourseRatingRequest)">
+            <summary>
+            Rate a resource with comment
+            </summary>
+            <param name="request">
+            
+            </param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:OERService.Controllers.EducationsController.Get">
+            <summary>
+            This will get all records from EducationMaster.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.EducationsController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.EducationsController.Post(OERService.Models.CreateEducationMaster)">
+             <summary>
+             This will Create a EducationMaster entry.
+             </summary>
+             <param name="Education">
+             CreateCategoryMaster
+            Body: 
+            {
+            	"Name" : "",
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.EducationsController.Put(System.Int32,OERService.Models.UpdateEducationMaster)">
+             <summary>
+             This will update EducationMaster entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="education">
+            Body: 
+            {
+            	"Name" : "",       
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.EducationsController.Delete(System.Int32)">
+            <summary>
+            This will delete an Education record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.InstitutionsController.Get">
+            <summary>
+            This will get all records from InstitutionMaster.
+            </summary>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.InstitutionsController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.InstitutionsController.Post(OERService.Models.CreateInstitutionMaster)">
+             <summary>
+             This will Create a Institution Master entry.
+             </summary>
+             <param name="institution">
+             CreateInstitutionMaster
+            Body: 
+            {
+            	"Name" : "",
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.InstitutionsController.Put(System.Int32,OERService.Models.UpdateInstitutionMaster)">
+             <summary>
+             This will update InstitutionMaster entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="institution">
+            Body: 
+            {
+            	"Name" : "",       
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.InstitutionsController.Delete(System.Int32)">
+            <summary>
+            This will delete an institution record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.MaterialsController.Get">
+            <summary>
+            This will get all records from MaterialTypeMaster.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.MaterialsController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.MaterialsController.Post(OERService.Models.CreateMaterialTypeMaster)">
+             <summary>
+             This will Create a MaterialTypeMaster entry.
+             </summary>
+             <param name="material">
+             CreateMaterialTypeMaster
+            Body: 
+            {
+            	"Name" : "",
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.MaterialsController.Put(System.Int32,OERService.Models.UpdateMaterialTypeMaster)">
+             <summary>
+             This will update MaterialTypeMaster entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="category">
+            Body: 
+            {
+            	"Name" : "",       
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.MaterialsController.Delete(System.Int32)">
+            <summary>
+            This will delete a category record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ProfessionsController.Get">
+            <summary>
+            This will get all records from Professions Master.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ProfessionsController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ProfessionsController.Post(OERService.Models.CreateProfessionMaster)">
+             <summary>
+             This will Create a Professions Master entry.
+             </summary>
+             <param name="profession">
+             CreateProfessionsMaster
+            Body: 
+            {
+            	"Name" : "",
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ProfessionsController.Put(System.Int32,OERService.Models.UpdateProfessionMaster)">
+             <summary>
+             This will update Professions Master entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="profession">
+            Body: 
+            {
+            	"Name" : "",       
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ProfessionsController.Delete(System.Int32)">
+            <summary>
+            This will delete a Professions Master record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ProfileController.GetById(System.String)">
+            <summary>
+            This will return user profile details for given email
+            </summary>
+            <param name="email"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ProfileController.Post(OERService.Models.CreateUserProfileRequest)">
+            <summary>
+            This will create a user profile
+            </summary>
+            <param name="profile"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.QRCController.Get">
+            <summary>
+            This will get all records from QRC.
+            </summary>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.QRCController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.QRCController.Post(OERService.Models.CreateQRCMaster)">
+             <summary>
+             This will Create a QRC entry.
+             </summary>
+             <param name="qrc">
+             CreateQRCMaster
+            Body: 
+            {
+            	"Name" : "",
+            	"Description" : "",
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.QRCController.Put(System.Int32,OERService.Models.UpdateQRCMaster)">
+             <summary>
+             This will update qrc entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="qrc">
+            Body: 
+            {
+            	"Name" : "", 
+            	"Description" : "",
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.QRCController.Delete(System.Int32)">
+            <summary>
+            This will delete a qrc record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.Get">
+            <summary>
+            This will get all records from Resource Master.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.GetById(System.Int32)">
+            <summary>
+            Get a resource referenced by the Id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.Post(OERService.Models.CreateResourceRequest)">
+             <summary>
+             This will Create a ResourceMaster entry.
+             </summary>
+             <param name="resource">
+             CreateResourceMaster
+            Body: 
+            { 
+              "title": "Resource8_updated",
+              "categoryId": 1,
+              "subCategoryId": 1,
+              "thumbnail": "Not yet uploaded",
+              "resourceDescription": "This description is updated",
+              "keywords": "No keywords are given",
+              "resourceContent": "No content given",  
+              "materialTypeId": 2,
+              "copyRightId": 2,
+              "isDraft": false,
+              "createdBy": 1,
+              "references": [
+              { "urlReference": "ref1" }, 
+              { "urlReference": "ref2" },
+              { "urlReference": "ref3" }],
+              "resourceFiles": [
+              {"associatedFile": "file1"},
+              {"associatedFile": "file2"}]}}
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.Put(System.Int32,OERService.Models.UpdateResourceRequest)">
+             <summary>
+             This will update ResourceMaster entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="resource">
+            Body: 
+            {   
+            {  "id":8,
+              "title": "Resource8_updated",
+              "categoryId": 1,
+              "subCategoryId": 1,
+              "thumbnail": "Not yet uploaded",
+              "resourceDescription": "This description is updated",
+              "keywords": "No keywords are given",
+              "resourceContent": "No content given",  
+              "materialTypeId": 2,
+              "copyRightId": 2,
+              "isDraft": false,
+              "createdBy": 1,
+              "references": [
+              { "urlReference": "ref1" }, 
+              { "urlReference": "ref2" },
+              { "urlReference": "ref3" }],
+              "resourceFiles": [
+              {"associatedFile": "file1"},
+              {"associatedFile": "file2"}]}}
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.Delete(System.Int32)">
+            <summary>
+            This will delete a resource record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.ApproveResource(System.Decimal,System.Int32)">
+            <summary>
+            This will approve a resource
+            </summary>
+            <param name="id"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.ReportResource(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.CommentOnResource(OERService.Models.ResourceCommentRequest)">
+            <summary>
+            
+            </summary>
+            <param name="resourceComment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.UpdateResourceComment(OERService.Models.ResourceCommentUpdateRequest)">
+            <summary>
+            
+            </summary>
+            <param name="resourceUpdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.ReportResourceComment(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.HideResourceComment(System.Decimal,System.Decimal,System.Int32)">
+            <summary>
+            Hide a resource comment. Can only be done by the resource owner
+            </summary>
+            <param name="id"></param>
+            <param name="resourceId"></param>
+            <param name="requestedBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.ReportResourceWithComment(OERService.Models.ResourceReportAbuseWithComment)">
+            <summary>
+            This will report a resource with comment and reason/s to report
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.ResourceController.RateResource(OERService.Models.ResourceRatingRequest)">
+            <summary>
+            Rate a resource with comment
+            </summary>
+            <param name="request">
+            
+            </param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:OERService.Controllers.StreamsController.Get">
+            <summary>
+            This will get all records from Stream Master.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.StreamsController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.StreamsController.Post(OERService.Models.CreateStreamMaster)">
+             <summary>
+             This will Create a Stream Master entry.
+             </summary>
+             <param name="stream">
+             CreateStreamMaster
+            Body: 
+            {
+            	"Name" : "",
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.StreamsController.Put(System.Int32,OERService.Models.UpdateStreamMaster)">
+             <summary>
+             This will update Stream Master entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="stream">
+            Body: 
+            {
+            	"Name" : "",       
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.StreamsController.Delete(System.Int32)">
+            <summary>
+            This will delete a stream record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.SubCategoriesController.Get">
+            <summary>
+            This will get all records from SubCategoryMaster.
+            </summary>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.SubCategoriesController.GetById(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.SubCategoriesController.Post(OERService.Models.CreateSubCategoryMaster)">
+             <summary>
+             This will Create a SubCategoryMaster entry.
+             </summary>
+             <param name="subCategory">
+             SubCategoryMaster
+            Body: 
+            {
+            	"Name" : "",
+            "CategoryId" : "1" 
+            	"CreatedBy" : "1"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.SubCategoriesController.Put(System.Int32,OERService.Models.UpdateSubCategoryMaster)">
+             <summary>
+             This will update SubCategoryMaster entry by id and details passed.
+             </summary>
+             <param name="id"></param>
+             <param name="subCategory">
+            Body: 
+            {
+            	"Name" : "",  
+            	"CategoryId" : "1" 
+            	"UpdatedBy" : "1" ,
+            	"Active":true/false
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.SubCategoriesController.Delete(System.Int32)">
+            <summary>
+            This will delete a SubCategory record by the id passed
+            </summary>
+            <param name="id"></param>
+            <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.URLWhiteListingController.GetWhiteListingRequests">
+            <summary>
+            This will get all pending URLWhiteListing requests.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.Controllers.URLWhiteListingController.Post(OERService.Models.WhiteListingRequest)">
+             <summary>
+             This will Create a request for URLWhiteListing.
+             </summary>
+             <param name="request">      
+            Body: 
+            {
+            	"RequestedBy" : "1",
+            	"URL" : "www.example.com"        
+            }
+             </param>
+             <returns>OperationResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.URLWhiteListingController.Put(System.Int32,OERService.Models.WhiteListUrl)">
+             <summary>
+             This will verify a URLWhiteListing request.
+             </summary>
+             <param name="id"></param>
+             <param name="request">
+            Body: 
+            {
+            	"Id" : "1",       
+            	"VerifiedBy" : "1" ,
+            	"IsApproved":true/false
+            	"RejectedReason":"reason" -- optional
+            }       
+             </param>
+             <returns>OperationsResponse</returns>
+        </member>
+        <member name="M:OERService.Controllers.URLWhiteListingController.ISWhilteListed(OERService.Models.IsWhiteListed)">
+            <summary>
+            This will check if a URL is already whitelisted, then returns details
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OERService.DataAccess.AppDataDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.CategoryDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.ConfigDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.CopyrightDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.CourseDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.EducationDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.InstitutionDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.MaterialTypeDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.ProfessionDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.ProfileDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.QrcDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.ResourceDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.StreamDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.SubCategoryDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:OERService.DataAccess.URLWhiteListingDataAccess.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor setting configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Core.Helpers.DataAccessHelper.GetConnection(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Returns connneciton string form configuration 
+            </summary>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Helpers.DataAccessHelper.#ctor(System.String,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Run SP without parameters
+            </summary>
+            <param name="sprocName"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Core.Helpers.DataAccessHelper.#ctor(System.String,System.Data.SqlClient.SqlParameter[],Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="sprocName"></param>
+            <param name="parameters"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Core.Helpers.DataAccessHelper.RunAsync">
+            <summary>
+            Run command with executeNonQuery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Helpers.DataAccessHelper.RunAsync(System.Data.DataTable)">
+            <summary>
+            Run command  with data adapter: fill datatable 
+            </summary>
+            <param name="dataTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Helpers.DataAccessHelper.RunAsync(System.Data.DataSet)">
+            <summary>
+            Run command  with data adapter: fill dataset
+            </summary>
+            <param name="dataSet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Core.Helpers.DataAccessHelper.Dispose">
+            <summary>
+            Dispose connection and command objects
+            </summary>
+        </member>
+        <member name="T:Core.Models.OperationResponse">
+            <summary>
+            Operation response convey status of request - success/failure/validation error etc. without a result data collection.
+            Mainly used on failure of requested operation or for a request which only have success message to display and no related result data object to be diplayed
+            </summary>
+        </member>
+        <member name="P:Core.Models.OperationResponse.ReturnedObject">
+            <summary>
+            Used to envelope created/updated object
+            </summary>
+        </member>
+        <member name="T:Core.Models.ServerResponse">
+            <summary>
+            Server response convey status of request  along with a result data collection. 
+            </summary>
+        </member>
+    </members>
+</doc>
